@@ -1,0 +1,17 @@
+.cache/
+*.*
+*.o
+*.d
+!*.c
+!*.cpp
+!*.h
+!*.hex
+!*.map
+!*.elf
+!*.bin
+!Makefile
+!.gitignore
+!*.ld
+!*.s
+!*.S
+

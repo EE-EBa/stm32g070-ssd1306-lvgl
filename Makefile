@@ -69,9 +69,9 @@ FLAGS_LD 	+= -Wl,-Map=$(PROJECT).map,--cref,--no-warn-mismatch # generate .map f
 
 # Define SRC, OBJ, DPT, INC files paths
 # for c
-C_INC_FILES           := $(shell find ./ -name "*.h" | xargs dirname)
+C_INC_FILES           := $(shell find ./ -name "*.h" ! -path "*/thorvg/*"| xargs dirname)
 C_INC_FILES           := $(addprefix -I, $(C_INC_FILES))
-C_SRC_FILES           := $(shell find ./ -name "*.c")
+C_SRC_FILES           := $(shell find ./ -name "*.c" )
 C_PRE_COMPILE_FILES   := $(patsubst %.c,%.i,$(C_SRC_FILES))  # C pre-compile
 # for cpp
 CXX_SRC_FILES         := $(shell find ./ -name "*.cpp")  # Change from *.c to *.cpp for C++ source files

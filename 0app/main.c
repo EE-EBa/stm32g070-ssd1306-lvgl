@@ -11,6 +11,7 @@ int main(void) {
   initialise_monitor_handles();
   printf("semihosting test ok!\n");
 
+
   bsp_init();
 
   run();
